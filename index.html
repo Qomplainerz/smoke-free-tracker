@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke-Free Tracker</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Companionem Linguae</h1>
+        <!-- Globale Navigation für die verschiedenen Apps -->
+        <nav aria-label="Globale Navigation">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a href="#timers" class="dropbtn">Timers</a>
+                    <div class="dropdown-content">
+                        <a href="/smoke-free-tracker">Smoke-Free-Tracker</a>
+                        <a href="/stopwatch">Stopwatch</a>
+                        <a href="/countdown-timer">Countdown Timer</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section aria-labelledby="input-section">
+            <h2 id="input-section">Settings</h2>
+            <form id="startForm">
+                <label for="startTime">Start time (YYYY-MM-DD HH:MM):</label>
+                <input type="datetime-local" id="startTime" required>
+                <button type="submit">Start</button>
+                <button type="button" id="loadLast">Load last attempt</button>
+                <button type="button" id="trackRelapse">I have a relapse</button>
+            </form>
+        </section>
+        
+        <section aria-labelledby="progress-section">
+            <h2 id="progress-section">Progress</h2>
+            <p>Attempt No.: <span id="attempts">0</span></p>
+            <p>You have been smoke-free for: <span id="timeElapsed"></span></p>
+            <p>Cigarettes avoided: <span id="cigsAvoided">0</span></p>
+            <p>Money saved: <span id="savings">0</span></p>
+            <p>Lifetime regained: <span id="lifeGained"></span></p>
+        </section>
+        
+        <!-- Neuer Bereich für Achievements -->
+        <section aria-labelledby="achievements-section">
+            <h2 id="achievements-section">Achievements</h2>
+            <div id="achievements-container"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Smoke-Free Tracker © 2025 by AdeptusCode</p>
+    </footer>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
